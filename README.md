@@ -22,5 +22,6 @@ A ideia do programa é cadastrar funcionários e registrar os horários de ponto
 3. Executar o programa
 
 ## Demonstração
-As capituras de telas mostram os processos feitos pelo sistema em ordem 
-cadastro de funcionario, registro de ponto e resutado final.
+As capituras de telas mostram os processos feitos pelo sistema em ordem.
+
+Cadastro de funcionario, registro de ponto e resutado final.
