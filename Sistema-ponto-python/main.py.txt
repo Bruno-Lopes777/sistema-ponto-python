@@ -1,0 +1,37 @@
+funcionarios = []
+cont =0
+while cont < 100:
+    #cadastro simples de funcionario para teste
+    nome = input("Digite um funcionário: ").title()
+    matricula = int(input("Digite sua matricula: "))
+    turno = input("Digite o turno: ")
+
+#dicionario para armazenar mais de uma informaçao do funcionario
+    funcionario = { "nome": nome,
+                    "matricula": matricula,
+                    "turno": turno,
+                    "pontos":[] #aqui vai os pontos do dia
+                    }
+    funcionarios.append(funcionario)
+    cont = cont +1
+    continuar = input("Cadastrar outro funcionario ? (S/N):").upper()
+    if continuar == "N":
+        break
+
+# registro apenas do dia
+dia = input("digite a data (d/m/a): ")
+
+# registra 4 batidas de ponto para cada funcionario
+for f in funcionarios:
+    print(f"\nRegistrando ponto para {f['nome']}:")
+    for i in range(1, 5):
+        hora = input(f"Digite a hora do ponto {i} (hh:mm): ")
+        f["pontos"].append({"dia": dia, "hora": hora})
+
+# Exibir todos os funcionários com seus pontos
+for f in funcionarios:
+    print(f"\nNome: {f['nome']}, Matrícula: {f['matricula']}, Turno: {f['turno']}")
+    print(f"Pontos do dia {dia}:")
+    for p in f["pontos"]:
+        print(f" - {p['hora']}")
+        print()
